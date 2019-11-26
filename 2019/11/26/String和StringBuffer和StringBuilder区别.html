@@ -47,13 +47,13 @@
   };
 </script>
 
-  <meta name="description" content="String和StringBuffer和StringBuilder区别">
+  <meta name="description" content="String和StringBuffer和StringBuilder区别共同点 String和StringBuffer和StringBuilder都是final class，不能被继承。 String的char[]是final前缀，所以String的char[]长度是不变的。 StringBuffer和StringBuilder是继承抽象类AbstractStringBuilder，而这个类的cha">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="String和StringBuffer和StringBuilder区别">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;String%E5%92%8CStringBuffer%E5%92%8CStringBuilder%E5%8C%BA%E5%88%AB.html">
 <meta property="og:site_name" content="咸鱼开发者">
-<meta property="og:description" content="String和StringBuffer和StringBuilder区别">
+<meta property="og:description" content="String和StringBuffer和StringBuilder区别共同点 String和StringBuffer和StringBuilder都是final class，不能被继承。 String的char[]是final前缀，所以String的char[]长度是不变的。 StringBuffer和StringBuilder是继承抽象类AbstractStringBuilder，而这个类的cha">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-11-26T05:04:55.297Z">
 <meta name="twitter:card" content="summary">
@@ -236,13 +236,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="String和StringBuffer和StringBuilder区别"><a href="#String和StringBuffer和StringBuilder区别" class="headerlink" title="String和StringBuffer和StringBuilder区别"></a>String和StringBuffer和StringBuilder区别</h1><a id="more"></a><h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><ul>
+        <h1 id="String和StringBuffer和StringBuilder区别"><a href="#String和StringBuffer和StringBuilder区别" class="headerlink" title="String和StringBuffer和StringBuilder区别"></a>String和StringBuffer和StringBuilder区别</h1><h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><ul>
 <li>String和StringBuffer和StringBuilder都是final class，不能被继承。</li>
 <li>String的char[]是final前缀，所以String的char[]长度是不变的。</li>
 <li>StringBuffer和StringBuilder是继承抽象类AbstractStringBuilder，而这个类的char[]是没有final前缀，所以他的char[]长度是可变的。</li>
 <li>StringBuffer线程安全，而StringBuilder线程不安全，因为StringBuffer的方法有synchronized前缀。</li>
 </ul>
-
     </div>
 
     
