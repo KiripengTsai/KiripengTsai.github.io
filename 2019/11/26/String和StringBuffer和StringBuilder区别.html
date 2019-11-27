@@ -55,7 +55,7 @@
 <meta property="og:site_name" content="咸鱼开发者">
 <meta property="og:description" content="String和StringBuffer和StringBuilder区别共同点 String和StringBuffer和StringBuilder都是final class，不能被继承。 Java容器 String的char[]是final前缀，所以String的char[]长度是不变的。 StringBuffer和StringBuilder是继承抽象类AbstractStringBuilder，而">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-27T15:08:51.139Z">
+<meta property="og:updated_time" content="2019-11-27T15:52:08.647Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/26/String%E5%92%8CStringBuffer%E5%92%8CStringBuilder%E5%8C%BA%E5%88%AB.html">
@@ -217,7 +217,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-27 15:08:51" itemprop="dateModified" datetime="2019-11-27T15:08:51Z">2019-11-27</time>
+                <time title="修改时间：2019-11-27 15:52:08" itemprop="dateModified" datetime="2019-11-27T15:52:08Z">2019-11-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -250,9 +250,9 @@
 <li>StringBuffer线程安全，而StringBuilder线程不安全，因为StringBuffer的方法有synchronized前缀。</li>
 </ul><a id="more"></a>
 <hr>
-<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>1.”String”和new String（”String”）的区别。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String a =<span class="keyword">new</span> String(<span class="string">"String"</span>);<span class="comment">//JVM会分配到一个新内存中。</span></span><br><span class="line">String b = <span class="string">"String"</span>; <span class="comment">//JVM会分配到常量池里面</span></span><br><span class="line">String c = <span class="string">"String"</span>; <span class="comment">//JVM会分配到常量池里面与b共用</span></span><br><span class="line"><span class="comment">//a==b false</span></span><br><span class="line"><span class="comment">//b==c true</span></span><br><span class="line">String d = a+b+c; <span class="comment">//只new一次，Java优化了</span></span><br></pre></td></tr></table></figure>
-<h2 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h2><ol>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ol>
+<li>“String”和new String（”String”）的区别。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String a =<span class="keyword">new</span> String(<span class="string">"String"</span>);<span class="comment">//JVM会分配到一个新内存中。</span></span><br><span class="line">String b = <span class="string">"String"</span>; <span class="comment">//JVM会分配到常量池里面</span></span><br><span class="line">String c = <span class="string">"String"</span>; <span class="comment">//JVM会分配到常量池里面与b共用</span></span><br><span class="line"><span class="comment">//a==b false</span></span><br><span class="line"><span class="comment">//b==c true</span></span><br><span class="line">String d = a+b+c; <span class="comment">//只new一次，Java优化了</span></span><br></pre></td></tr></table></figure>
+<h2 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h2></li>
 <li>StringBuffer的capacity默认值为16。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">StringBuffer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(<span class="number">16</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
 <li>StringBuffer的长度是可变的。</li>
 <li>StringBuffer是通过synchronized同步方法实现线程安全。</li>
